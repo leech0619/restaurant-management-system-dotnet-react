@@ -9,7 +9,7 @@
 
 **A modern, full-stack restaurant management system where every meal is a despicably delicious adventure!**
 
-[Features](#-features) • [Tech Stack](#-tech-stack) • [Architecture](#-architecture-overview) • [Database](#-database-design-ef-core-code-first) • [Installation](#-installation--setup) • [Usage](#-usage)
+[Features](#features) • [Tech Stack](#tech-stack) • [Architecture](#architecture-overview) • [Database](#database-design) • [Installation](#installation--setup) • [Usage](#usage)
 
 </div>
 
@@ -32,6 +32,7 @@ This project was developed **for learning purposes** to:
 
 ---
 
+<a id="features"></a>
 ## 🚀 Features
 
 ### 🔐 **Authentication & Authorization**
