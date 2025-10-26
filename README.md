@@ -176,6 +176,7 @@ A playful yet professional **Minion-inspired** design:
 
 ---
 
+<a id="usage"></a>
 ## 💡 Usage
 
 ### **Admin**
