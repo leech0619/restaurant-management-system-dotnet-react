@@ -230,7 +230,7 @@ This project is licensed under the **MIT License**.
 
 ## 🙌 Acknowledgments
 
-- **Minions™** theme inspiration  
+- **Minion** theme inspiration  
 - **Microsoft** for ASP.NET Core  
 - **React Team** for the frontend framework  
 - **Open Source Community** for supporting tools  
