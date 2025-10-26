@@ -9,7 +9,7 @@
 
 **A modern, full-stack restaurant management system where every meal is a despicably delicious adventure!**
 
-[Features](#-features) • [Installation](#️-installation) • [Usage](#-usage) • [Tech Stack](#-tech-stack)
+[Features](#-features) • [Installation](#️-installation) • [Usage](#-installation--Setup) • [Tech Stack](#-tech-stack)
 
 </div>
 
