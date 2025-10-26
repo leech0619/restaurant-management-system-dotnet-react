@@ -1,0 +1,32 @@
+{
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/bin": true,
+    "**/obj": true,
+    "**/.vs": true
+  },
+  "search.exclude": {
+  "**/node_modules": true,
+    "**/bin": true,
+ "**/obj": true,
+    "**/.vs": true,
+    "**/dist": true
+  },
+  "terminal.integrated.env.windows": {
+    "ASPNETCORE_ENVIRONMENT": "Development"
+  },
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp"
+  },
+  "dotnet.defaultSolution": "RestaurantManagementSystem.sln"
+}

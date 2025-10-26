@@ -1,0 +1,142 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "?? Start Backend API",
+  "type": "shell",
+      "command": "dotnet",
+      "args": ["run", "--launch-profile", "https"],
+   "options": {
+        "cwd": "${workspaceFolder}/RestaurantManagementSystem.Server"
+      },
+      "isBackground": true,
+      "problemMatcher": {
+        "pattern": {
+          "regexp": "^.*$",
+          "file": 1,
+    "location": 2,
+       "message": 3
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^.*Building.*$",
+    "endsPattern": "^.*Now listening on.*$"
+        }
+   },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+  "showReuseMessage": false,
+  "clear": false,
+        "group": "minion-cafe"
+      }
+    },
+    {
+      "label": "?? Start Frontend React",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "dev"],
+      "options": {
+        "cwd": "${workspaceFolder}/restaurantmanagementsystem.client"
+      },
+      "isBackground": true,
+      "problemMatcher": {
+      "pattern": {
+          "regexp": "^.*$",
+          "file": 1,
+ "location": 2,
+    "message": 3
+        },
+        "background": {
+   "activeOnStart": true,
+       "beginsPattern": "^.*VITE.*$",
+      "endsPattern": "^.*Local:.*$"
+    }
+      },
+      "presentation": {
+      "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": false,
+        "clear": false,
+"group": "minion-cafe"
+  }
+    },
+    {
+      "label": "?? Start Minion Cafe (Full Stack)",
+      "dependsOn": [
+        "?? Start Backend API",
+        "?? Start Frontend React"
+      ],
+      "dependsOrder": "parallel",
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+      "reveal": "always",
+  "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": false
+  }
+},
+    {
+      "label": "?? Stop All Servers",
+      "type": "shell",
+      "command": "echo",
+  "args": ["Stopping servers... Press Ctrl+C in terminal panels"],
+    "problemMatcher": []
+    },
+    {
+      "label": "??? Update Database",
+      "type": "shell",
+      "command": "dotnet",
+  "args": ["ef", "database", "update"],
+      "options": {
+        "cwd": "${workspaceFolder}/RestaurantManagementSystem.Server"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+   "panel": "shared"
+      }
+    },
+    {
+  "label": "?? Build Backend",
+      "type": "shell",
+      "command": "dotnet",
+      "args": ["build"],
+      "options": {
+        "cwd": "${workspaceFolder}/RestaurantManagementSystem.Server"
+      },
+      "problemMatcher": "$msCompile",
+      "group": {
+     "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+"label": "?? Build Frontend",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "build"],
+      "options": {
+        "cwd": "${workspaceFolder}/restaurantmanagementsystem.client"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "??? Build Full Stack",
+      "dependsOn": [
+      "?? Build Backend",
+        "?? Build Frontend"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    }
+  ]
+}

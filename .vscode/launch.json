@@ -1,0 +1,52 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "?? Debug Backend (.NET)",
+      "type": "coreclr",
+      "request": "launch",
+    "preLaunchTask": "?? Start Backend API",
+      "program": "${workspaceFolder}/RestaurantManagementSystem.Server/bin/Debug/net8.0/RestaurantManagementSystem.Server.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/RestaurantManagementSystem.Server",
+      "stopAtEntry": false,
+ "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+        "uriFormat": "%s/swagger"
+  },
+ "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "sourceFileMap": {
+        "/Views": "${workspaceFolder}/Views"
+      }
+    },
+    {
+  "name": "?? Launch Minion Cafe (Full Stack)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "?? Start Minion Cafe (Full Stack)",
+      "program": "${workspaceFolder}/RestaurantManagementSystem.Server/bin/Debug/net8.0/RestaurantManagementSystem.Server.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/RestaurantManagementSystem.Server",
+      "stopAtEntry": false,
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+ "uriFormat": "http://localhost:5173"
+      },
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  ],
+  "compounds": [
+    {
+      "name": "?? Full Stack Debug",
+      "configurations": ["?? Debug Backend (.NET)"],
+      "preLaunchTask": "?? Start Minion Cafe (Full Stack)",
+      "stopAll": true
+    }
+  ]
+}
