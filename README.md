@@ -83,7 +83,7 @@ A playful yet professional **Minion-inspired** design:
 
 ---
 
-## Tech Stack
+##  Tech Stack
 
 **Backend**
 - ASP.NET Core 8  
@@ -109,7 +109,7 @@ A playful yet professional **Minion-inspired** design:
 
 ---
 
-## Architecture Overview
+##  Architecture Overview
 
 **Backend (ASP.NET Core)**
 - Controllers (Auth, Menu, Orders)  
