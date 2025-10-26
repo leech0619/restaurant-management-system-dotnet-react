@@ -84,7 +84,8 @@ A playful yet professional **Minion-inspired** design:
 
 ---
 
-##  Tech Stack
+<a id="tech-stack"></a>
+## ⚙️ Tech Stack
 
 **Backend**
 - ASP.NET Core 8  
@@ -110,7 +111,8 @@ A playful yet professional **Minion-inspired** design:
 
 ---
 
-##  Architecture Overview
+<a id="architecture-overview"></a>
+## 🏗️ Architecture Overview
 
 **Backend (ASP.NET Core)**
 - Controllers (Auth, Menu, Orders)  
@@ -126,6 +128,7 @@ A playful yet professional **Minion-inspired** design:
 
 ---
 
+<a id="database-design"></a>
 ## 🧩 Database Design (EF Core Code-First)
 
 **Entities:**
@@ -141,6 +144,7 @@ A playful yet professional **Minion-inspired** design:
 
 ---
 
+<a id="installation--setup"></a>
 ## 🧰 Installation & Setup
 
 ### Prerequisites
